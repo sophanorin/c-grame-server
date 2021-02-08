@@ -46,8 +46,6 @@ userRouter.get(
         res.status(422).send({ error: err });
       } else {
         const date = new Date(doc.expireToken);
-        console.log(date.getTime());
-        console.log(Date.now());
         if (date.getTime() - Date.now() > 0) {
           console.log("not expire yet");
           res.send({ expire: false });
@@ -148,7 +146,7 @@ userRouter.get(
           subject: "reset-password",
           html: `
               <p>You requested for password reset</p>
-              <h5>Click this <a href="http://localhost:3000/reset/${token}">link</a> to reset password</h5>
+              <h5>Click this <a href="https://serene-borg-167da7.netlify.app/reset/${token}">link</a> to reset password</h5>
             `,
         });
         console.log("sent mail");

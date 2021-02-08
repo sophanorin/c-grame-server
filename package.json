@@ -19,7 +19,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon server/server.js",
     "heroku-postBuild": "npm install && exec start"
   },
   "author": "",
