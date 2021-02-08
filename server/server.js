@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import userRouter from "./routers/userRouter.js";
 import postRouter from "./routers/postRouter.js";
 import cors from "cors";
+import userSimpleRouter from "./routers/simpleUserRouter.js";
 
 dotenv.config();
 
