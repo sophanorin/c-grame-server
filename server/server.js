@@ -30,6 +30,7 @@ mongoose
 //router......
 app.use("/api/users", userRouter);
 app.use("/api/post", postRouter);
+app.use("/api/simple", userSimpleRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
